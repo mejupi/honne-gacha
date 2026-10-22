@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="耳と本音を選んで、へんてこな化け物の画像生成プロンプトを作る無料の本音ガチャ。">
+<title>王様の耳はロバの耳｜あなたの本音ガチャ</title>
+<style>
+:root{color-scheme:light;--paper:#f5f1e6;--ink:#292c26;--red:#b6422d;--line:#cbc6b7}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;line-height:1.8}button,textarea{font:inherit}button{cursor:pointer}button:focus-visible,textarea:focus-visible{outline:3px solid var(--red);outline-offset:4px}.wrap{max-width:1080px;margin:auto;padding:26px 32px 40px}.mast{display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:12px;font-size:12px;letter-spacing:.12em}.version{color:var(--red)}header{display:grid;grid-template-columns:1fr 260px;align-items:center;gap:30px;padding:45px 0 36px}.eyebrow{font-size:12px;color:var(--red);letter-spacing:.18em}h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(32px,5vw,52px);line-height:1.5;letter-spacing:.05em;margin:12px 0 18px}h1 small{display:block;font-size:17px;font-weight:400}header p{font-size:14px;margin:0;color:#5e6055}.doodle{width:240px;height:245px;transform:rotate(4deg)}.intro{display:flex;justify-content:space-between;border-top:1px solid var(--ink);padding:13px 0;font-size:12px;gap:15px}.steps{display:grid;grid-template-columns:1fr 1fr;gap:36px;border-bottom:1px solid var(--line);padding:20px 0 34px}h2{font-size:18px;font-weight:500;margin:0 0 18px}.number{font-family:Georgia,serif;color:var(--red);font-size:25px;margin-right:12px}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice{border:1px solid var(--line);background:transparent;color:var(--ink);padding:14px 5px 11px;border-radius:3px;transition:background .15s,border-color .15s}.choice:hover{background:#e9e4d6}.choice[aria-pressed="true"]{border:2px solid var(--ink);padding:13px 4px 10px;background:#e7e4d4;box-shadow:2px 2px 0 var(--ink)}.icon{display:block;font-family:serif;font-size:25px;line-height:1.4;margin-bottom:4px}.label{font-size:13px}.hint{font-size:12px;color:#77786b;margin:10px 0 0}.action{text-align:center;padding:30px 0}.primary{background:var(--red);color:#fffaf0;border:1px solid var(--red);border-radius:3px;padding:14px 65px;font-size:17px;letter-spacing:.12em;box-shadow:3px 3px 0 #733324}.primary:hover{background:#963521}.primary:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #733324}.action p{font-size:12px;color:#727266;margin:12px 0 0}.result{border:1px solid var(--ink);padding:26px;margin:8px 0 30px;background:#fbf8ef;scroll-margin-top:20px}.result[hidden]{display:none}.result-top{display:flex;align-items:center;justify-content:space-between;gap:16px}.stamp{font-size:12px;color:var(--red);border:1px solid;padding:2px 10px;transform:rotate(-5deg)}.result h2{margin:0}.summary{font-size:14px;margin:18px 0}.result label{display:block;font-size:12px;color:#626458;margin-bottom:7px}textarea{display:block;width:100%;min-height:265px;resize:vertical;padding:16px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:14px;line-height:1.9;border-radius:2px}.result-actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}.secondary{background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:2px;padding:10px 22px}.secondary:hover{background:#e9e4d6}.copy{background:var(--ink);color:var(--paper)}.copy:hover{background:#484c40}#status{min-height:26px;font-size:13px;color:var(--red);margin:10px 0 0}.notes{font-size:12px;color:#707164;border-top:1px solid var(--line);padding-top:20px}.notes p{margin:4px 0}footer{display:flex;justify-content:space-between;margin-top:32px;font-size:11px;letter-spacing:.08em;color:#77786b}@media(max-width:650px){.wrap{padding:18px 20px 30px}header{grid-template-columns:1fr;gap:10px;padding:30px 0 24px}.doodle{width:145px;height:145px;justify-self:end;margin-top:-35px}header p{max-width:270px}.steps{grid-template-columns:1fr;gap:28px}.intro{font-size:11px}.primary{width:100%;padding:14px 18px}.result{padding:18px}.result-top{align-items:flex-start}.result h2{font-size:17px}.result-actions button{flex:1;padding:10px 12px}.mast{font-size:10px}.choices{gap:8px}footer{font-size:10px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="mast"><span>王様の耳はロバの耳</span><span class="version">PROMPT BUILDER / v0.3</span></div>
+<header><div><div class="eyebrow">言えないことにも、かたちがある。</div><h1><small>王様の耳はロバの耳</small>あなたの本音ガチャ</h1><p>飲みこんだ本音を、へんてこな化け物に。<br>耳と本音を選んだら、あとは運まかせ。</p></div>
+<svg class="doodle" viewBox="0 0 260 260" fill="none" stroke="#292c26" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="架空の耳と小さな王冠のある、気の抜けた化け物"><path d="M76 110 Q23 84 42 45 Q54 24 71 43 L61 55 L78 49 Q88 73 99 102 M151 101 Q198 69 218 93 L204 108 L222 111 Q211 137 173 119" fill="#dedfc8"/><path d="M59 151 Q49 98 115 95 Q185 88 199 151 L207 211 Q182 229 163 216 Q147 234 126 219 Q103 235 82 217 Q59 228 51 212Z" fill="#dedfc8"/><path d="M101 92 L94 64 L114 74 L128 48 L139 73 L159 64 L154 94" fill="#c49b48"/><path d="M52 163 Q21 145 26 177 M199 163 Q231 145 230 177 M91 220 L88 243 L70 244 M167 219 L170 243 L189 242"/><path d="M94 144 L100 146 M153 144 L160 141 M115 174 Q130 181 143 173"/><path d="M116 198 Q130 194 143 200" stroke="#b6422d"/><path d="M20 103 L9 95 M225 102 L239 95 M224 119 L244 120"/><text x="130" y="257" text-anchor="middle" stroke="none" fill="#77786b" font-size="10">本音、はみ出してます。</text></svg></header>
+<div class="intro"><span>あそびかた：選ぶ → 回す → プロンプトをコピー</span><span>無料・登録不要</span></div>
+<div class="steps"><section aria-labelledby="ears-heading"><h2 id="ears-heading"><span class="number">01</span>どんな耳で、聞いていた？</h2><div id="ears" class="choices" role="group" aria-label="耳を1つ選択"></div><p class="hint">化け物につく耳を、ひとつ。</p></section><section aria-labelledby="truths-heading"><h2 id="truths-heading"><span class="number">02</span>ほんとは、どう思ってる？</h2><div id="truths" class="choices" role="group" aria-label="本音を1つ選択"></div><p class="hint">いちばん近い本音を、ひとつ。</p></section></div>
+<div class="action"><button id="spin" class="primary" type="button">ガチャを回す ↗</button><p>どんな化け物になるかは、出てからのお楽しみ。</p></div>
+<section id="result" class="result" aria-labelledby="result-heading" hidden><div class="result-top"><h2 id="result-heading">あなたの本音、こんな姿です。</h2><span class="stamp">本音採集済</span></div><p id="summary" class="summary"></p><label for="prompt">画像生成AIに貼り付けるプロンプト（編集できます）</label><textarea id="prompt" spellcheck="false"></textarea><div class="result-actions"><button id="copy" class="secondary copy" type="button">プロンプトをコピー</button><button id="again" class="secondary" type="button">同じ条件でもう一度回す ↻</button></div><p id="status" role="status" aria-live="polite"></p></section>
+<div class="notes"><p>このページはプロンプトを作る道具です。画像生成は、お好きな画像生成AIでどうぞ。</p><p>生成結果はAIによって変わります。必ず同じ造形になるとは限りません。</p><p>選択内容・入力内容は外部へ送信されません。</p></div>
+<footer><span>本音は、ちょっとへんなくらいでいい。</span><span>HONNE GACHA</span></footer>
+</main>
+<script>
+'use strict';
+// 架空の器官の設定。選択UIには name と icon だけを表示します。
+const ears = [
+ {name:'ひそ耳',icon:'⌇⌜',detail:'細長く先端が小さく分岐した架空の耳。小声を集めるように内側へ巻いている。周囲の声や小さな変化を拾いすぎ、耳先だけが細かく反応する'},
+ {name:'つっぱり耳',icon:'│⌁',detail:'片方は無理に直立し、もう片方は折れ曲がった架空の耳。根元の小さなつっかい棒がなければ倒れそう。弱みを隠して平気なふりをしているのに、耳の支えだけが頼りない'},
+ {name:'かかえ耳',icon:'⟅⟆',detail:'大きな架空の耳が身体を包み込もうとし、先端が内側へ巻いている。他人の言葉や感情まで抱え込むように耳を寄せるが、状況に必要な動きや胴体の構造は隠さない'},
+ {name:'ぬけ耳',icon:'┆○',detail:'穴と隙間がある架空の耳。聞いた言葉がそのまま抜けていきそうな空洞構造。都合の悪いことや面倒なことを聞き流すように、耳の入口と出口が素通しになっている。言葉の文字は描かない'},
+ {name:'よこみみ',icon:'─⌁',detail:'左右が横方向へ不自然に伸びた架空の耳。片方だけ何かを探るように曲がっている。周囲を気にしていないふりでも、横へ伸びた耳先だけが隣を探っている'},
+ {name:'ぼーぼー耳',icon:'≋〰',detail:'架空の耳から長い耳毛が生え、隠している本音が毛の動きに出てしまう。本人の表情は澄ましていても、耳毛だけが感情に反応する。毛は不気味にせず、扱いに困る滑稽な造形として描く'}
+];
+// 耳毛の動きは抽選済みの本音と対応させ、出力に明記します。
+const earHairActions = [
+ '耳毛だけが帰り道へ伸び、毛先が小さな荷物のようにまとまって先に帰ろうとする',
+ '耳毛だけが背伸びするように逆立ち、拍手を待つ両手のように毛先を開く',
+ '耳毛だけがしおれて絡まり、床に寝そべるようにだらりと垂れる',
+ '耳毛だけが逆立って後ろへ反り、毛先で控えめな拒否の形を作る',
+ '耳毛だけが隣の欲しいものや影を指し、見ないふりをする本人より先に伸びる',
+ '耳毛だけがほどけたり絡まったりしながら、届かない気持ちを差し出すように前へ伸びる'
+];
+const truths = [
+ {name:'もう帰りたい',icon:'↩',detail:'「もう帰りたい」。その場を離れて家に帰りたいが、帰れない'},
+ {name:'ほめられたい',icon:'✧',detail:'「ほめられたい」。平静を装いつつ、ほめ言葉を待っている'},
+ {name:'何もしたくない',icon:'…',detail:'「何もしたくない」。やる気が完全に休暇を取っている'},
+ {name:'ほんとは嫌だ',icon:'×',detail:'「ほんとは嫌だ」。周りに合わせているが、内心では断りたい'},
+ {name:'うらやましい',icon:'◎',detail:'「うらやましい」。隣の誰かを、気にしていないふりで見ている'},
+ {name:'わかってほしい',icon:'！',detail:'「わかってほしい」。言葉にならない気持ちをそっと差し出している'}
+];
+// 季節装飾を無効にする場合は false に。UIや外部通信は不要です。
+const seasonal = { enabled: true, props: [
+ 'しなびたジャックオランタン','やる気のないコウモリ','サイズの合わない魔女帽子',
+ 'くたびれたオバケシーツ','空っぽのお菓子バケツ','曲がった小さな墓標','不格好なキャンディ'
+] };
+// 状況とポーズはセットで抽選し、立つ／座るなどの食い違いを防ぎます。
+const situations = [
+ [
+  {scene:'帰宅準備だけ完璧なのに、胴体自体が玄関のドアで、自分が帰ろうとすると自分が閉まる',pose:'ドア型の胴体を半開きにし、足だけ出口へ向ける',body:'左右非対称の玄関ドアのような胴体'},
+  {scene:'自分の足から伸びた細長い腕が、自分のすそをつかんで引き留めている',pose:'上半身だけ帰りかけ、足元の腕と無言で綱引きする'},
+  {scene:'背中には帰宅用の小さな取っ手があるのに、その取っ手を自分でつかんでその場から動けない',pose:'背中の取っ手を握って、片足だけ出口へ踏み出す'}
+ ],
+ [
+  {scene:'自分で用意した小さすぎる表彰台に座り、誰もいない観客席へ何度もお辞儀している',pose:'表彰台からおしりをはみ出させ、深くお辞儀する'},
+  {scene:'背中から伸びた自分の手が肩をたたいてほめているのに、よその誰かからの拍手を待ち続けている',pose:'背中の手に肩をたたかれながら、胸を張って待つ'},
+  {scene:'自分の胴体が授賞式の額縁になっているのに、中に飾られているのは自分の小さなひじだけ',pose:'額縁型の胴体の中央にひじを差し出し、反応をうかがう',body:'左右で太さの違う額縁のような胴体'}
+ ],
+ [
+  {scene:'寝転んでいるのに、頭にはやる気の象徴である巨大な空回りの歯車が乗り、本人だけ一切動かない',pose:'床に横たわり、気まずそうに目だけそらす'},
+  {scene:'休むための椅子に座ろうとしたら、自分の体そのものが椅子になっていて自分だけ座れない',pose:'椅子型の体を曲げ、自分の座面へ腰掛けようとして止まる',body:'脚の長さがそろわない椅子のような体'},
+  {scene:'自分の影だけがせっせと床を掃除し、本人はその影を布団にして寝ようとしている',pose:'働く影の上に横たわり、端を布団のように引っ張る'}
+ ],
+ [
+  {scene:'全力で断りたいのに、両手が勝手に拍手し、顔だけが控えめに拒否している',pose:'体を少し引き、勝手に拍手する両手を困った目で見る'},
+  {scene:'断ろうと口を開くたび、おなかの小さな手が勝手に賛成の挙手をする',pose:'口を開き、おなかの手をもう片方の手でそっと下げる'},
+  {scene:'胴体がうなずく振り子になっており、嫌がる顔と逆に体だけ何度も了承してしまう',pose:'振り子型の胴体を前へ傾け、目だけ横へそらす',body:'片側だけ重い振り子のような胴体'}
+ ],
+ [
+  {scene:'空席に置かれた小さな王冠を欲しがっているのに、自分の頭には王冠が7個ずれて重なっている',pose:'7個の王冠を傾けながら、空席の王冠へそっと手を伸ばす'},
+  {scene:'隣の小さな影をうらやましがっているが、自分の巨大な影が隣の影を丁寧にまねている',pose:'自分の影を背にして、隣の小さな影を横目で見る'},
+  {scene:'空席にある豆粒ほどの勲章を欲しがっているのに、自分の背中は勲章で重くなり前へ進めない',pose:'背中の勲章を引きずり、豆粒ほどの勲章に顔を近づける'}
+ ],
+ [
+  {scene:'全身に耳があるのに、自分の口から出るのは足元で丸まる短い糸だけで、空席まで届かない',pose:'口元の糸を空席へ差し出し、途中でたるんだ糸を見つめる'},
+  {scene:'おなかが窓口になっているのに、自分が相談しようとすると内側から自分の小さな手が窓を閉める',pose:'窓口型のおなかに顔を向け、閉まりかけの窓をのぞく',body:'左右で高さの違う窓口のような胴体'},
+  {scene:'気持ちを届けるために背中から伝声管を生やしたが、出口が自分のひざにしかつながっていない',pose:'背中の伝声管に話しかけ、自分のひざから返事を待つ'}
+ ]
+];
+const settings = {
+ body:['しぼんだ巾着のような体','片側だけつぶれた弁当箱のような体','首が横から生えた下ぶくれの体','くしゃくしゃの紙袋のような体','長すぎる胴と短すぎる足','ひじの位置が低すぎる細長い体'],
+ color:['くすんだよもぎ色','薄いあずき色','色あせたからし色','灰色がかった水色','淡い土色','くすんだ桃色'],
+ feature:['ひじが片方だけ外へせり出し、置き場所に困っている','背中から伸びた細い棒の先が小さなスプーンになり、几帳面に水平を保つ','おなかの端に空の引き出しが半分だけ開いている','片側の肩だけ妙に高く、本人は水平のつもりでいる','片ひざに小さな取っ手があり、大切そうに磨かれている','片方のほっぺだけ四角く張り、本人は澄ました顔をしている'],
+ prop:['片足だけサイズの合わないスリッパを履く','しわの寄った短いネクタイをつける','ポケットの底から裏地が少しはみ出す','ずれた無地の腕章をつける','片側だけ長いくつ下を履く','襟だけが妙にきちんとしている']
+};
+let selectedEar = 0;
+let selectedTruth = 0;
+let previousSettings = '';
+let drawnSelection = null;
+const $ = id => document.getElementById(id);
+function renderChoices(id, items, selected) {
+ $(id).replaceChildren(...items.map((item, index) => {
+  const button = document.createElement('button');
+  button.type = 'button'; button.className = 'choice';
+  button.setAttribute('aria-pressed', String(index === selected));
+  const icon = document.createElement('span'); icon.className = 'icon'; icon.setAttribute('aria-hidden', 'true'); icon.textContent = item.icon;
+  const label = document.createElement('span'); label.className = 'label'; label.textContent = item.name;
+  button.append(icon, label);
+  button.addEventListener('click', () => {
+   if (id === 'ears') selectedEar = index; else selectedTruth = index;
+   for (const [i, child] of [...$(id).children].entries()) child.setAttribute('aria-pressed', String(i === index));
+  });
+  return button;
+ }));
+}
+const pick = values => values[Math.floor(Math.random() * values.length)];
+function drawSettings(truthIndex) {
+ const result = {};
+ for (const [key, values] of Object.entries(settings)) result[key] = pick(values);
+ const situation = pick(situations[truthIndex]);
+ result.situation = situation.scene;
+ result.pose = situation.pose;
+ // 状況に必要な身体構造は、抽選した基本体型に具体的に反映します。
+ if (situation.body) result.body = situation.body;
+ result.halloween = seasonal.enabled ? pick(seasonal.props) : null;
+ // 状況で体型が固定される場合も、必ず前回と違う結果にします。
+ if (JSON.stringify(result) === previousSettings) result.color = settings.color[(settings.color.indexOf(result.color) + 1) % settings.color.length];
+ previousSettings = JSON.stringify(result);
+ return result;
+}
+function spin(repeat = false) {
+ if (!repeat || !drawnSelection) drawnSelection = {ear: selectedEar, truth: selectedTruth};
+ const ear = ears[drawnSelection.ear], truth = truths[drawnSelection.truth], s = drawSettings(drawnSelection.truth);
+ $('summary').textContent = `${ear.name} × ${truth.name} ／ ${s.color}の、${s.body}。ナニソレ状況：${s.situation}。`;
+ $('prompt').value = `次の確定設定で、思わず「ナニソレ!?」と笑ってしまう化け物のイラストを1枚描いてください。画力は問わない。常識だけ少し壊す。
+
+【耳・固有設定】${ear.name}。${ear.detail}。${drawnSelection.ear === 5 ? `耳毛の具体的な動き：${earHairActions[drawnSelection.truth]}。顔は澄ましたまま、気まずさは目線と耳毛の動きで表す。` : ''}
+【動物化の抑制】耳は架空の器官であり、特定の動物種を表すものではない。耳の形によって身体全体を動物化しない。顔や体型も動物に固定せず、架空の生物、奇妙な道具、家具、日用品を思わせる身体構造を許容する。耳は身体の材質や厚みに合った根元で自然につなぎ、貼り付けた装飾に見せない。全身に耳がある状況では、増える耳も選択した架空の耳の形を引き継ぐ。
+【本音】${truth.detail}。この飲み込んだ言葉を、気まずい表情と状況の滑稽な矛盾で表す。
+【基本体型】${s.body}。
+【配色】${s.color}を中心に、少ない色数で。
+【奇妙な特徴】${s.feature}。
+【装い】${s.prop}。
+【ナニソレ状況】${s.situation}。
+【状況に合わせたポーズ】${s.pose}。
+${s.halloween ? `【ハロウィン小道具】${s.halloween}を1つだけ、足元の脇に控えめに配置する。帽子やシーツも身につけず、脇に置く。これ以外のハロウィン装飾や演出は追加しない。主役の耳や表情を隠さない。` : '【季節装飾】なし。ハロウィン小道具や季節演出は加えない。'}
+
+【画風・笑いの軸】ゆる脱力系の手描きイラスト。シュールな絵本のような雰囲気。妙な哀愁と、少しだけ毒のあるユーモア。本人は大真面目で、笑わせようとしていない。不自然だが意図のある造形、左右非対称、気まずい表情、予想外の身体構造や行動、本音と姿の滑稽な矛盾を描く。絵を下手にすること自体は目的にせず、奇妙な発想と本人の大真面目さが生む笑いを優先する。揺れた線と控えめな塗りで、整えすぎない。
+【避ける表現】商業マスコット風、整いすぎた可愛いキャラクター、萌え系・美少女化、派手なファンタジー演出、過剰な装飾、グロテスク、流血、暴力、痛々しい表現。
+【設定の優先順位】動物化の抑制条件、耳の固有設定と本音の意味を最優先し、次にナニソレ状況とそのポーズ、次に体型・特徴・装いを反映する。状況に必要な身体構造を省略しない。装いと特徴は状況の動作を妨げない位置に収める。
+【構図】化け物は1体、固有の耳や身体構造を含めて全身が画面に収まる。状況に指定した物と影を描き、観客や別のキャラクターは加えない。背景は生成りの紙のようにシンプルにし、余白を広く取る。文字、吹き出し、ロゴは入れない。`;
+ $('status').textContent = '';
+ $('result').hidden = false;
+ $('result').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+}
+$('spin').addEventListener('click', () => spin());
+$('again').addEventListener('click', () => spin(true));
+$('copy').addEventListener('click', async () => {
+ if ($('copy').disabled) return;
+ $('copy').disabled = true;
+ $('status').textContent = '';
+ const value = $('prompt').value;
+ try {
+  if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+  await navigator.clipboard.writeText(value);
+  $('status').textContent = 'コピーしました。画像生成AIに貼り付けて使えます。';
+ } catch {
+  $('prompt').focus(); $('prompt').select();
+  let copied = false;
+  try { copied = document.execCommand('copy'); } catch { /* 手動コピーへ案内 */ }
+  $('status').textContent = copied ? 'コピーしました。画像生成AIに貼り付けて使えます。' : '自動コピーが使えません。選択された文章を長押し、または Ctrl+C（Macは⌘C）でコピーしてください。';
+ } finally {
+  $('copy').disabled = false;
+ }
+});
+renderChoices('ears', ears, selectedEar);
+renderChoices('truths', truths, selectedTruth);
+</script>
+</body>
+</html>
